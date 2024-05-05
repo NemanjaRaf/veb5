@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Public Blog</a>
+</nav>
+
+<div class="container">
+    <button id="new-post-btn" class="btn btn-primary">New Post</button>
+
+    <form id="post-form" style="display:none;">
+        <div class="form-group">
+            <label for="post-title">Title</label>
+            <input type="text" class="form-control" id="post-title" placeholder="Enter post title">
+            <label for="post-author">Author</label>
+            <input type="text" class="form-control" id="post-author" placeholder="Enter author name">
+            <label for="post-content">Content</label>
+            <textarea class="form-control" id="post-content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+
+    <h2 class="mt-5">Posts</h2>
+    <div id="post-links"></div>
+
+    <!-- Detail View for Post -->
+    <div id="post-detail" style="display: none;">
+        <h3 id="detail-title"></h3>
+        <p id="detail-author"></p>
+        <p id="detail-content"></p>
+        <div id="comments"></div>
+        <form id="comment-form" style="display: none;">
+            <div class="form-group">
+                <label for="comment-author">Your Name</label>
+                <input type="text" class="form-control" id="comment-author" placeholder="Enter your name">
+                <label for="comment-content">Comment</label>
+                <textarea class="form-control" id="comment-content" placeholder="Write a comment"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Add Comment</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
